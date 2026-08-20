@@ -1,0 +1,49 @@
+/home/bcelli/pswib_run.sh: line 3: /home/bcelli/bin/my_env/python3: No such file or directory
+/home/bcelli/pswib_run.sh: line 3: /home/bcelli/bin/myenv/python3: No such file or directory
+Traceback (most recent call last):
+  File "/home/bcelli/Projects/RAVENS/Sensor Interfacing/pswib_log.py", line 75, in <module>
+    bus = SMBus(3)
+  File "/home/bcelli/myenv/lib/python3.13/site-packages/smbus2/smbus2.py", line 285, in __init__
+    self.open(bus)
+    ~~~~~~~~~^^^^^
+  File "/home/bcelli/myenv/lib/python3.13/site-packages/smbus2/smbus2.py", line 315, in open
+    self.fd = os.open(filepath, os.O_RDWR)
+              ~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/dev/i2c-3'
+Traceback (most recent call last):
+  File "/home/bcelli/Projects/RAVENS/Sensor Interfacing/pswib_log.py", line 106, in <module>
+    with open("bno calibration/bno055_offsets.json", "r") as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'bno calibration/bno055_offsets.json'
+Exception in thread Thread-1 (bme_ping):
+Exception in thread Thread-2 (bag_ping):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "/usr/lib/python3.13/threading.py", line 1043, in _bootstrap_inner
+    self.run()
+    ~~~~~~~~^^
+  File "/usr/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.13/threading.py", line 994, in run
+    self._target(*self._args, **self._kwargs)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/bcelli/Projects/RAVENS/Sensor Interfacing/pswib_log.py", line 282, in bme_ping
+    bme = adafruit_bme680.Adafruit_BME680_I2C(i2c, address=0x77)
+                                              ^^^
+  File "/home/bcelli/Projects/RAVENS/Sensor Interfacing/pswib_log.py", line 341, in bag_ping
+    bag_bme = adafruit_bme680.Adafruit_BME680_I2C(i2c, address=0x76)
+                                                  ^^^
+NameError: name 'i2c' is not defined
+NameError: name 'i2c' is not defined
+BME offset calibration underway...
+                                                  Could not connect to pitot bme: No I2C device at address: 0x77
+Connected to bag BME.
+Could not connect to pitot bme: No I2C device at address: 0x77
+Could not connect to pitot bme: No I2C device at address: 0x77
+BME offset calibration underway...
+ Could not connect to pitot bme: No I2C device at address: 0x77
+                                                 
